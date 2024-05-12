@@ -73,7 +73,7 @@ async function initialLoad() {
   breeds.forEach((breed) => {
     const option = document.createElement("option");
     option.id = breed;
-    breed.append(option);
+    breedSelect.append(option);
   });
 }
 initialLoad();
@@ -96,15 +96,19 @@ initialLoad();
  */
 breedSelect.addEventListener("change", selectBreed);
 
-async function breedSelect(evt) {
-  const breedID = breedSelect.value;
+async function selectBreed(evt) {
+  const breedID = selectBreed.value;
   const response = await fetch(
     " https://api.thecatapi.com/v1/images/search?breed_ids=${breedID}"
   );
   console.log(response);
   const images = await response.json();
+
+  images.forEach((image) => {
+    const carouselItem = document.createElement("div");
+  });
 }
-breedSelect();
+selectBreed();
 
 /**
  * 3. Fork your own sandbox, creating a new one named "JavaScript Axios Lab."
