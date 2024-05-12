@@ -98,7 +98,9 @@ breedSelect.addEventListener("change", selectBreed);
 
 async function selectBreed(evt) {
   const breedID = breedSelect.value;
-  const response = await fetch(" https://api.thecatapi.com/v1/breeds");
+  const response = await fetch(
+    " https://api.thecatapi.com/v1/images/search?breed_ids=${breedID}&limit=10"
+  );
   console.log(response);
   const images = await response.json();
 
