@@ -97,7 +97,8 @@ initialLoad();
 breedSelect.addEventListener("change", selectBreed);
 
 async function selectBreed(evt) {
-  const breedID = breedSelect.value;
+  console.log(evt);
+  // const breedID = breedSelect.value;
   const response = await fetch(
     " https://api.thecatapi.com/v1/images/search?breed_ids=${breedID}&limit=10"
   );
@@ -106,7 +107,10 @@ async function selectBreed(evt) {
 
   images.forEach((image) => {
     const carouselItem = document.createElement("div");
+    carouselItem.appendChild(carouselItem);
   });
+
+  // const breed = images[0].breeds[0];
 }
 selectBreed();
 
