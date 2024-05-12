@@ -96,10 +96,12 @@ initialLoad();
  */
 
 async function breedSelect() {
+  const breedID = breedSelect.value;
   const response = await fetch(
-    const breedID = 
     " https://api.thecatapi.com/v1/images/search?breed_ids=${breedID}"
   );
+  console.log(response);
+  const images = await response.json();
 }
 
 /**
