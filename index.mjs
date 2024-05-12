@@ -95,6 +95,13 @@ initialLoad();
  * - Add a call to this function to the end of your initialLoad function above to create the initial carousel.
  */
 
+async function breedSelect() {
+  const response = await fetch(
+    const breedID = 
+    " https://api.thecatapi.com/v1/images/search?breed_ids=${breedID}"
+  );
+}
+
 /**
  * 3. Fork your own sandbox, creating a new one named "JavaScript Axios Lab."
  */
