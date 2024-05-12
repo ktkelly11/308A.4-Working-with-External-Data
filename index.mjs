@@ -24,6 +24,39 @@ axios("https://api.thecatapi.com/v1/images/search")
     console.log(err);
   });
 
+// fetch("https://api.thecatapi.com/v1/images/search")
+//   .then((x) => {
+//     console.log(x);
+//     x.json().then((j) => {
+//       console.log(j);
+//     });
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+// async function MyFunction() {
+//   let apiData = await axios(
+//     "https://api.thecatapi.com/v1/images/search?limit=10"
+//   );
+//   console.log(apiData.data);
+// }
+
+// MyFunction().then((x) => {
+//   console.log(x);
+// });
+
+async function myFunction2() {
+  let apiData = await fetch(
+    "https://api.thecatapi.com/v1/images/search?limit=10"
+  );
+  let jsonData = await apiData.json();
+  console.log(jsonData);
+}
+myFunction2().then((x) => {
+  console.log(x);
+});
+
 /**
  * 1. Create an async function "initialLoad" that does the following:
  * - Retrieve a list of breeds from the cat API using fetch().
