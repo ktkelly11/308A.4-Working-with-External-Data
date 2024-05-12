@@ -68,10 +68,15 @@ async function MyFunction() {
 
 async function initialLoad() {
   const response = await fetch("https://api.thecatapi.com/v1/breeds");
-  response.forEach(breed){
+  response.forEach((breed) => {
     const option = document.createElement("option");
-  }
+    option.id = breed;
+    breed.append(option);
+  });
 }
+initialLoad();
+
+// That's technically what I think we were supposed to do, but it isn't working and I did not understand most of this lesson and tried to study on my own, but I just don't understand this material
 
 /**
  * 2. Create an event handler for breedSelect that does the following:
