@@ -66,9 +66,11 @@ async function MyFunction() {
  * This function should execute immediately.
  */
 
-const breeds = document.getElementsByTagName(img);
 async function initialLoad() {
   const response = await fetch("https://api.thecatapi.com/v1/breeds");
+  response.forEach(breed){
+    const option = document.createElement("option");
+  }
 }
 
 /**
