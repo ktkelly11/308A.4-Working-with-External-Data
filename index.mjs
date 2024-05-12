@@ -68,7 +68,9 @@ async function MyFunction() {
 
 async function initialLoad() {
   const response = await fetch("https://api.thecatapi.com/v1/breeds");
-  response.forEach((breed) => {
+  const breeds = await response.json();
+
+  breeds.forEach((breed) => {
     const option = document.createElement("option");
     option.id = breed;
     breed.append(option);
