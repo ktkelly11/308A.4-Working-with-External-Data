@@ -66,9 +66,9 @@ async function MyFunction() {
  * This function should execute immediately.
  */
 
-const cat = document.getElementById();
+const breeds = document.getElementsByTagName(img);
 async function initialLoad() {
-  const api = "https://api.thecatapi.com/v1/breeds";
+  const response = await fetch("https://api.thecatapi.com/v1/breeds");
 }
 
 /**
