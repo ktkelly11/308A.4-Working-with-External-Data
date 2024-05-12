@@ -66,6 +66,7 @@ async function MyFunction() {
  * This function should execute immediately.
  */
 
+const cat = document.getElementById();
 async function initialLoad() {
   const api = "https://api.thecatapi.com/v1/breeds";
 }
