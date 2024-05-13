@@ -73,7 +73,7 @@ async function initialLoad() {
   breeds.forEach((breed) => {
     const option = document.createElement("option");
     option.id = breed;
-    breedSelect.append(option);
+    breedSelect.appendChild(option);
   });
 }
 initialLoad();
@@ -107,10 +107,14 @@ async function selectBreed(evt) {
 
   images.forEach((image) => {
     const carouselItem = document.createElement("div");
+    carouselItem.classList.add("carousel-item");
+    carouselItem.appendChild(carouselInner);
+
+    const img = document.createElement("img");
+    img.src = image.url;
+    img.alt = image.breeds;
     carouselItem.appendChild(carouselItem);
   });
-
-  // const breed = images[0].breeds[0];
 }
 selectBreed();
 
